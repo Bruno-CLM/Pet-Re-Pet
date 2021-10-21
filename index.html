@@ -8,6 +8,9 @@
         <title>PET RE-PET</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/logo.ico" />
+        <!-- reCAPTCHA -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -28,7 +31,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#services">Serviços</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#galery">Galeria</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#galery">PETGRAM</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
                         <li class="nav-item"><a class="nav-link" href="#shops">Lojas</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
@@ -87,8 +90,8 @@
         <section class="page-section bg-light" id="galery">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Galeria</h2>
-                    <h3 class="section-subheading text-muted">Confira os serviços que já executamos.</h3>
+                    <h2 class="section-heading text-uppercase">PETGRAM</h2>
+                    <h3 class="section-subheading text-muted">Confira aqui o instagram dos pets.</h3>
                 </div>
                 <div class="row">
 
@@ -289,33 +292,38 @@
                     <h2 class="section-heading text-uppercase">Contatar</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                <form id="contactForm" action="https://api.staticforms.xyz/submit" onsubmit="return checkForm()" method="post">
+                    <input type="hidden" name="accessKey" value="5c04e1d0-d26e-43f5-a501-a715ff8e22d3">
+                    <input type="hidden" name="redirectTo" value="https://pet-re-pet.netlify.app/#contact">
+                    <input type="text" name="honeypot" style="display: none;">
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
+                            <input type="hidden" name="acessKey" value="7f006047-3bda-4337-bc54-628eca109648">
                             <div class="form-group">
                                 <!-- Name input-->
-                                <input class="form-control" id="name" type="text" placeholder="Seu nome *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">O nome é obrigatorio</div>
+                                <input class="form-control" id="name" name="name" type="text" placeholder="Seu nome *" data-sb-validations="required" />
+                                <div class="invalid-name">O nome é obrigatório.</div>
                             </div>
                             <div class="form-group">
                                 <!-- Email address input-->
-                                <input class="form-control" id="email" type="email" placeholder="Seu email *" data-sb-validations="required,email" />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">Email obrigatorio.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email inválido.</div>
+                                <input class="form-control" id="email" name="email" type="email" placeholder="Seu email *" data-sb-validations="required,email" />
+                                <div class="invalid-mail1 ">O email é obrigatorio.</div>
+                                <div class="invalid-mail2">Email inválido.</div>
                             </div>
                             <div class="form-group mb-md-0">
                                 <!-- Phone number input-->
-                                <input class="form-control" id="phone" type="tel" placeholder="Seu telefone *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">Telefone obrigatorio.</div>
+                                <input class="form-control" id="phone" name="phone" type="tel" placeholder="Seu telefone *" data-sb-validations="required" />
+                                <div class="invalid-phone">O telefone é obrigatório.</div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
                                 <!-- Message input-->
-                                <textarea class="form-control" id="message" placeholder="Sua mensagem *" data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">Mensagem obrigatoria</div>
+                                <textarea class="form-control" id="message" name="message" placeholder="Sua mensagem *" data-sb-validations="required"></textarea>
+                                <div class="invalid-message">A mensagem é obrigatória.</div>
                             </div>
                         </div>
+                            <div class="g-recaptcha mt-2" data-sitekey="6LePfOEcAAAAADA2D12sdfwJ34ZEQQuww-5Jz8-W"></div>
                     </div>
                     <!-- Submit success message-->
                     <!---->
@@ -325,7 +333,6 @@
                         <div class="text-center text-white mb-3">
                             <div class="fw-bolder">Sua mensagem foi enviada com sucesso!</div>
                             <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                         </div>
                     </div>
                     <!-- Submit error message-->
@@ -334,7 +341,7 @@
                     <!-- an error submitting the form-->
                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Não foi possível enviar sua mensagem!</div></div>
                     <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Enviar mensagem</button></div>
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">Enviar mensagem</button></div>
                 </form>
             </div>
         </section>
@@ -360,10 +367,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+        <script src="js/validacao.js"></script
     </body>
 </html>

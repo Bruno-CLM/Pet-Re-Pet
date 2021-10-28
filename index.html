@@ -35,7 +35,7 @@
                         <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
                         <li class="nav-item"><a class="nav-link" href="#shops">Lojas</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
-                        <li class="nav-item"><a class="btn btn-primary  text-uppercase" href="D:\Projeto PetShop\Login\index.html">Espaço Cliente</a></li>
+                        <li class="nav-item"><a class="btn btn-primary  text-uppercase" href="pet-re-pet-login-cadastro.netlify.app">Espaço Cliente</a></li>
                     </ul>
                 </div>
             </div>
@@ -111,7 +111,7 @@
                         <div class="portfolio-item">
                                 <img class="img-fluid shadow-lg rounded" src="assets/img/pet_galery2.jpg" alt="..." />
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Lord Coffee</div>
+                                <div class="portfolio-caption-heading">Lorde Coffee</div>
                                 <div class="portfolio-caption-subheading text-muted">Aproveitando sua nova roupa!</div>
                             </div>
                         </div>
@@ -157,7 +157,7 @@
                                 <img class="img-fluid shadow-lg rounded" src="assets/img/pet_galery6.png" alt="..." />
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Cacau</div>
-                                <div class="portfolio-caption-subheading text-muted">Pensativa  🤔</div>
+                                <div class="portfolio-caption-subheading text-muted">Pensativa 🤔</div>
                             </div>
                         </div>
                     </div>
@@ -289,10 +289,10 @@
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contatar</h2>
+                    <h2 class="section-heading text-uppercase">Contato</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
-                <form id="contactForm" action="https://api.staticforms.xyz/submit" onsubmit="return checkForm()" method="post">
+                <form id="contactForm" action="https://api.staticforms.xyz/submit" method="post">
                     <input type="hidden" name="accessKey" value="5c04e1d0-d26e-43f5-a501-a715ff8e22d3">
                     <input type="hidden" name="redirectTo" value="https://pet-re-pet.netlify.app/#contact">
                     <input type="text" name="honeypot" style="display: none;">
@@ -323,7 +323,8 @@
                                 <div class="invalid-message">A mensagem é obrigatória.</div>
                             </div>
                         </div>
-                            <div class="g-recaptcha mt-2" data-sitekey="6LePfOEcAAAAADA2D12sdfwJ34ZEQQuww-5Jz8-W"></div>
+                            <!---<div class="g-recaptcha mt-2" id="recaptcha" data-sitekey="6LePfOEcAAAAADA2D12sdfwJ34ZEQQuww-5Jz8-W"></div>
+                            <div class="invalid-recaptcha">O Recaptcha é obrigatório.</div>-->
                     </div>
                     <!-- Submit success message-->
                     <!---->
@@ -341,7 +342,8 @@
                     <!-- an error submitting the form-->
                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Não foi possível enviar sua mensagem!</div></div>
                     <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">Enviar mensagem</button></div>
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase g-recaptcha" data-sitekey="6LdRmP0cAAAAAPcxUYHkE-tTjMYrkPoD3LVazmyU" 
+                        data-callback='onSubmit' id="submitButton" type="submit">Enviar mensagem</button></div>
                 </form>
             </div>
         </section>
@@ -351,9 +353,9 @@
                 <div class="row align-items-center">
                     <div class="col-lg-4 text-lg-start">Copyright &copy; Pet Re-Pet 2021</div>
                     <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                     <div class="col-lg-4 text-lg-end">
                         <a class="link-light text-decoration-none me-3" href="#!">Política de Privacidade</a>

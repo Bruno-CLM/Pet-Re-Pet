@@ -2914,7 +2914,7 @@ textarea.form-control-lg {
   z-index: 3;
 }
 
-.invalid-message, .invalid-phone, .invalid-phone, .invalid-mail1, .invalid-mail2, .invalid-name  {
+.invalid-message, .invalid-phone, .invalid-phone, .invalid-mail1, .invalid-mail2, .invalid-name, .invalid-recaptcha  {
   display: none;
   width: 100%;
   margin-top: 0.25rem;
@@ -2922,7 +2922,7 @@ textarea.form-control-lg {
   color: #dc3545;
 }
 
-.invalid-message.active, .invalid-phone.active, .invalid-phone.active, .invalid-mail1.active, .invalid-mail2.active, .invalid-name.active{
+.invalid-message.active, .invalid-phone.active, .invalid-phone.active, .invalid-mail1.active, .invalid-mail2.active, .invalid-name.active, .invalid-recaptcha.active{
   display: inline;
 }
 
@@ -3036,32 +3036,32 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #62C3D9;
-  border-color: #62C3D9;
+  background-color: #F2913D;
+  border-color: #F2913D;
 }
 .btn-primary:hover {
-  color: #62C3D9;
+  color: #F2913D;
   background-color: #fff;
-  border-color: #62C3D9;
+  border-color: #F2913D;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
-  color: #62C3D9;
+  color: #F2913D;
   background-color: #fff;
-  border-color: #62C3D9;
-  box-shadow: 0 0 0 0.25rem #62C3D9;
+  border-color: #F2913D;
+  box-shadow: 0 0 0 0.25rem #F2913D;
 }
 .btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
-  color: #62C3D9;
+  color: #F2913D;
   background-color: #fff;
-  border-color: #62C3D9;
+  border-color: #F2913D;
 }
 .btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.25rem #62C3D9;
+  box-shadow: 0 0 0 0.25rem #F2913D;
 }
 .btn-primary:disabled, .btn-primary.disabled {
   color: #fff;
-  background-color: #62C3D9;
-  border-color: #62C3D9;
+  background-color: #F2913D;
+  border-color: #F2913D;
 }
 
 .btn-secondary {
@@ -11339,6 +11339,12 @@ p {
   padding: 0;
   border-radius: 100%;
   background-color: #F2913D;
+  color: #fff;
+}
+
+.btn-social:hover {
+  color: #F2913D;
+  background-color: #FFF;
 }
 
 #mainNav {
@@ -11420,14 +11426,14 @@ header.masthead {
   background-size: cover;
 }
 header.masthead .masthead-subheading {
-  font-size: 1.7rem !important;
+  font-size: 1rem ;
   font-style: italic;
   line-height: 1.5rem;
   margin-bottom: 25px;
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 header.masthead .masthead-heading {
-  font-size: 2.7rem !important;
+  font-size: 1.2rem;
   font-weight: 700;
   line-height: 1rem;
   margin-bottom: 2rem;
@@ -11446,7 +11452,7 @@ header.masthead .masthead-heading {
     margin-bottom: 2rem;
   }
   header.masthead .masthead-heading {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     font-weight: 700;
     line-height: 4.5rem;
     margin-bottom: 4rem;

@@ -4,6 +4,7 @@ let nameform = document.getElementById("name");
 let phone = document.getElementById("phone");
 let message = document.getElementById("message");
 let btnLogin = document.getElementById("submitButton");
+let recaptcha = document.getElementById("recaptcha");
 
 form.addEventListener('submit', (e) => {
 
@@ -14,7 +15,7 @@ form.addEventListener('submit', (e) => {
     if (resultForm == false) {
         e.preventDefault();
     } else {
-        userAction();
+        setTimeout(userAction(), 500000)
     }
 });
 
@@ -79,6 +80,16 @@ function checkForm() {
         document.querySelector(".invalid-message").classList.remove("active");
     }
 
+    if (!recaptcha.isChecked()) {
+        document.querySelector(".invalid-recaptcha").classList.add("active");
+        message.focus();
+        return "";
+    }
+    else{
+        document.querySelector(".invalid-recaptcha").classList.remove("active");
+    }
+    
     return true;
+    
 }
 

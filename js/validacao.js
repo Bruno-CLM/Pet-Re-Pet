@@ -16,6 +16,7 @@ form.addEventListener('submit', (e) => {
         e.preventDefault();
     } else {
         setTimeout(userAction(), 500000)
+        onSubmit(token);
     }
 });
 

@@ -1,8 +1,11 @@
 version: 0.0
 os: linux
+files:
+  - source: /index.html
+    destination: /var/www/html/
 hook:
   BeforeInstall:
-    - location: stop-server
+    - location: /stop-server
       timeout: 300
       runas: root
 

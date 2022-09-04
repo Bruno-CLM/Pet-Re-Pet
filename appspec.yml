@@ -1,5 +1,7 @@
 version: 0.0
 os: linux
+ DownloadBundle:
+    - location: /home/ec2-user
 files:
   - source: source
     destination: /var/www/html/

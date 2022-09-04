@@ -1,0 +1,7 @@
+version: 0.0
+os: linux
+hooks:
+  Install:
+    - location: /var/www/html
+  ApplicationStart:
+    - command: sudo systemctl start apache2
